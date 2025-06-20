@@ -1,12 +1,35 @@
 
+    :root {
+  --bg-color: #F6EDE3;
+  --text-color: #404041;
+  --navbar-bg: #F6EDE3;
+  --navbar-text: #404041;
+  --card-bg: #fff;
+  --card-text: #404041;
+  --footer-bg: #F6EDE3;
+  --footer-text: #404041;
+}
+
+body.dark-mode {
+  --bg-color: #18191a;
+  --text-color: #f1f1f1;
+  --navbar-bg: #23272b;
+  --navbar-text: #f1f1f1;
+  --card-bg: #23272b;
+  --card-text: #f1f1f1;
+  --footer-bg: #18191a;
+  --footer-text: #f1f1f1;
+}
     body {
       font-family: 'Montserrat', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #F6EDE3;
-      color:  #404041;
+      background: var(--bg-color);
+      color: var(--text-color);
       overflow-x :hidden;
     }
+
+
     header {
       display: flex;
       justify-content: space-between;
@@ -14,12 +37,12 @@
       padding: 2rem 5vw 0 5vw;
 
     }
-    .navbar-brand{
-      color: #404041;
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+     color: var(--navbar-text) !important;
     }
     nav a {
       text-decoration: none;
-      color: #404041;
       margin: 0 1.5rem;
     }
    
@@ -186,7 +209,8 @@
       justify-content: center;
     }
     .project-card {
-      background: #fff;
+      background: var(--card-bg);
+      color: var(--card-text);
       border: 2px solid #ddd;
       border-radius: 2rem;
       padding: 2rem 1.5rem 1.5rem 1.5rem;
@@ -202,7 +226,7 @@
       border-radius: 1.5rem;
       object-fit: cover;
       margin-bottom: 1.2rem;
-      background: #eee;
+     
     }
     .project-card h4 {
       font-size: 1.5rem;
@@ -219,8 +243,8 @@
       padding: 0.5rem 1.2rem;
       border-radius: 1.5rem;
       border: 1.5px solid #404041;
-      background: #fff;
-      color: #404041;
+      background: var(--card-bg);
+      color: var(--card-text);
       font-weight: 500;
       text-decoration: none;
       font-size: 1rem;
@@ -228,8 +252,8 @@
     }
     .project-links a:hover {
       background: linear-gradient(45deg,#D3CAE2, #E6C17A);
-      color: #404041;
-      border-color: #404041;
+      color: var(--card-text);
+      border-color: var(--card-text);
     }
     .contact-section {
       text-align: center;
@@ -243,14 +267,14 @@
       border-radius: 2rem;
       padding: 1.5rem 2.5rem;
       margin: 2rem 0;
-      background: #fff;
+      background: var(--card-bg);
     }
     .contact-link {
       display: flex;
       align-items: center;
       gap: 0.7rem;
       font-size: 1.2rem;
-      color: #404041;
+      color: var(--card-text);
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
@@ -266,10 +290,12 @@
       margin: 2rem 0 1rem 0;
       font-size: 1.3rem;
       flex-wrap: wrap;
+      background: var(--footer-bg);
+      color: var(--footer-text);
     }
     .footer-nav a {
       margin: 0 1rem;
-      color: #404041;
+      color: var(--footer-text);
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -277,8 +303,9 @@
       color: #E6C17A;
     }
     footer {
+
       text-align: center;
-      color: #666;
+      color: var(--footer-text);
       font-size: 1rem;
       margin-bottom: 1.5rem;
     }
